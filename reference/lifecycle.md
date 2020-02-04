@@ -3,7 +3,7 @@ id: lifecycle
 title: Game Life Cycle
 ---
 
-# Lifecycle
+# Game Life Cycle
 
 Each Game is made a succession of events, from an Admin creating a Batch to players going through Rounds and Stages. Some of those events trigger callbacks that can be implemented by the Game designer. This document attemps to clarify the ordering and timing of these events.
 

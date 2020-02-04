@@ -1,12 +1,22 @@
 # Table of contents
 
-* [Quick Start](README.md)
-* [API](api.md)
-* [Concepts](concepts.md)
-* [Guess The Correlation](guess-the-correlation.md)
-* [Lifecycle](lifecycle.md)
-* [Random Dot Motion](random-dot-motion.md)
-* [Room Assignment](room-assignment.md)
-* [Usage](usage.md)
-* [Your First Experiment](your-first-experiment.md)
+* [Index](README.md)
+
+## Getting Started
+
+* [Quick Start](getting-started/quick-start.md)
+* [Usage](getting-started/usage.md)
+* [Your First Experiment](getting-started/your-first-experiment.md)
+
+## Community Demos
+
+* [Guess The Correlation](community-demos/guess-the-correlation.md)
+* [Random Dot Motion](community-demos/random-dot-motion.md)
+* [Room Assignment](community-demos/room-assignment.md)
+
+## Reference
+
+* [Concepts](reference/concepts.md)
+* [Game Life Cycle](reference/lifecycle.md)
+* [API](reference/api.md)
 
