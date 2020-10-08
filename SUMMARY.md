@@ -4,6 +4,7 @@
 
 ## Getting Started
 
+* [Installing Developer Tools in Windows](getting-started/installing-developer-tools-in-windows.md)
 * [Quick Start](getting-started/quick-start.md)
 * [Usage](getting-started/usage.md)
 * [Your First Experiment](getting-started/your-first-experiment.md)
