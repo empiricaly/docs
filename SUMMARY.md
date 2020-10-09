@@ -4,8 +4,6 @@
 
 ## Getting Started
 
-* [Installing Developer Tools in Windows](getting-started/installing-developer-tools-in-windows.md)
-* [Helpful commands to use in Ubuntu 20.04](getting-started/helpful-commands-to-use-in-ubuntu-20.04.md)
 * [Quick Start](getting-started/quick-start.md)
 * [Usage](getting-started/usage.md)
 * [Your First Experiment](getting-started/your-first-experiment.md)
@@ -21,4 +19,9 @@
 * [Concepts](reference/concepts.md)
 * [Game Life Cycle](reference/lifecycle.md)
 * [API](reference/api.md)
+
+## Tips & Tricks
+
+* [Helpful Linux Commands](tips-and-tricks/helpful-linux-commands.md)
+* [Code Editors](tips-and-tricks/code-editors.md)
 
