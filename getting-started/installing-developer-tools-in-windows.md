@@ -41,6 +41,8 @@ In order to install WSL2 and Ubuntu 20.04, follow the steps in this guide:  [htt
 
 Our instructions follow this guide: [https://tecadmin.net/install-nodejs-with-nvm/](https://tecadmin.net/install-nodejs-with-nvm/)
 
+_Note: Use the right-click to paste in the command line._
+
 Enter the following commands into your Ubuntu terminal.
 
 ```text
