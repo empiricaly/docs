@@ -6,13 +6,27 @@ sidebar_label: Quick Start
 
 # Quick Start
 
+## Pre-requisites:
+
+### Windows Users:
+
+Follow "[Installing Developer Tools in Windows](installing-developer-tools-in-windows.md)"
+
+### MacOS / Linux: 
+
 You will first need to install Node.js and Meteor on your local development machine.
 
-For Node.js, head over to [https://nodejs.org/en/](https://nodejs.org/en/) and Download the LTS \(left\) bundle, and install it on your machine.
+Install Node.js via [https://nodejs.org/en/](https://nodejs.org/en/)  \[download and install the LTS \(left\) bundle\]
 
-For meteor you can follow the instructions at [https://www.meteor.com/install](https://www.meteor.com/install).
+Install Meteor with instructions at [https://www.meteor.com/install](https://www.meteor.com/install)
 
-Once those are all installed, run the following 3 command in your terminal. feel free to change `my-experiment` with the name of you experiment \(no spaces\).
+## Quick Start:
+
+Once your system is configured as described above...
+
+### 1. Run the following 3 command in your terminal. 
+
+Replace `my-experiment` with the name of your experiment \(no spaces\).
 
 ```bash
 npx create-empirica-app my-experiment
@@ -20,9 +34,9 @@ cd my-experiment
 meteor
 ```
 
-Then open [http://localhost:3000/](http://localhost:3000/) to see your experiment.
+### 2. Open [http://localhost:3000/](http://localhost:3000/) to see your experiment.
 
-Try and edit files in this folder to change your experiment.
+Edit files in this folder to see instant updates in the browser.
 
 Have fun!
 
