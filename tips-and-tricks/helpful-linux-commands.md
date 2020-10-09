@@ -6,7 +6,7 @@ description: >-
 
 # Helpful Linux Commands
 
-## Useful commands
+## Commands
 
 To find in which directory you currently are, use:
 
@@ -55,7 +55,7 @@ Now that you have run multiple commands, and that you will be launching Empirica
 * Use **ctrl+l** to clear your command line.
 * Use **ctrl+c** to cancel \(whilst writing it\) or interrupt \(when it is running\) a command.
 
-## Helpful tips for Windows WSL users
+## Tips for Windows WSL users
 
 ### Viewing, accessing, and modifying your files
 
@@ -67,23 +67,9 @@ explorer.exe .
 
 Nevertheless, you will also need to get accustomed to using the command line to navigate in, and use, the the files and folders in your WSL directory. Here are some useful commands.
 
-### Code editors
+{% hint style="info" %}
+Head over to our Code Editors advice page to find out how to use our recommended code editor with Windows WSL:
 
-There are multiple code editors that you could use in your WSL when creating your Empirica apps. One that is particularly easy to install, use, and launch is Visual Studio Code \(VS Code\).
-
-You need to install it on your normal Windows machine: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
-
-Then you need to get this extension install on your VS Code: [https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
-
-Once this is done, you can easily launch VS Code from the command line in your WSL with:
-
-```text
-code <directory>
-```
-
-Or if you want to open the directory you are currently in with VS Code you can use:
-
-```text
-code .
-```
+{% page-ref page="code-editors.md" %}
+{% endhint %}
 
