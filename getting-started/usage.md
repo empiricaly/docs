@@ -61,6 +61,14 @@ meteor
 The page will automatically reload if you make changes to the code.  
  You will see the build errors in the console.
 
+## Finding out which version of Empirica Core I have
+
+If you are unsure as to which version of Empirica you have, you can run this line in your app to show you all the elements in the app, including Empirica Core:
+
+```bash
+meteor list
+```
+
 ## Updating Empirica Core
 
 As new versions of Empirica become available, you might want to update the version you are using in your app. To do so, simply run:

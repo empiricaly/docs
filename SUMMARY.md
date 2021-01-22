@@ -25,3 +25,9 @@
 * [Helpful Linux Commands](tips-and-tricks/helpful-linux-commands.md)
 * [Code Editors](tips-and-tricks/code-editors.md)
 
+## Links
+
+* [Empirica website](https://empirica.ly/)
+* [Twitter](https://twitter.com/empirica_ly)
+* [GitHub](https://github.com/empiricaly)
+
