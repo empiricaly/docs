@@ -9,7 +9,7 @@ title: Your First Experiment
 
 Although it won't do too much, Empirica works straight out of the box. The first step to customizing your Empirica app is to launch a test game so you can see your edits in action.
 
-1. First, follow the [Quick Start guide](quick-start) to launch your app
+1. First, follow the [Quick Start guide](quick-start.md) to launch your app
 
    server. Watch the terminal output to see your automatically generated admin
 
