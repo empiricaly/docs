@@ -146,7 +146,7 @@ handleChange = event => {
 
 The next step is to allow the experimenter to modify the stimulus without having to update the experiment code directly. We'll accomplish this by adding a JS object to a `constants.js` file, that will contain all the stimulus information, and then use that in the experiment via the `Empirica.gameInit` method.
 
-This all happens server-side, so you need to create this file in your `/server/` directory instead of your `/client/` directory. Create a file called `/server/game/constants.js`, and add the following code to it.
+This all happens server-side, so you need to create this file in your `/server/` directory instead of your `/client/` directory. Create a file called `/server/constants.js`, and add the following code to it.
 
 ```javascript
 export const taskData = {
@@ -168,7 +168,7 @@ We're not actually going to use the `correctAnwser` value in this demo, but if y
 
 ### Using data from `constants.js`
 
-Next, we need to use this data in the `Empirica.gameInit` callback in `/server/game/main.js`.
+Next, we need to use this data in the `Empirica.gameInit` callback in `/server/main.js`.
 
 First, we import the `constants.js` data with `import { taskData } from "./constants";` added to the head of `main.js`.
 
@@ -176,7 +176,7 @@ We're also going to update this method to randomly assign each player a set of "
 
 Note also that these examples make use of [underscore.js](http://underscorejs.org) a library of convenient javascript tools.
 
-`/server/game/main.js`
+`/server/main.js`
 
 ```javascript
 import Empirica from "meteor/empirica:core";
