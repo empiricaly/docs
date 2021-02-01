@@ -16,6 +16,7 @@
 
 ## Reference
 
+* [FAQ](reference/faq.md)
 * [Concepts](reference/concepts.md)
 * [Game Life Cycle](reference/lifecycle.md)
 * [API](reference/api.md)
