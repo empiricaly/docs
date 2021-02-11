@@ -5,7 +5,7 @@
 ## Getting Started
 
 * [Quick Start](getting-started/quick-start.md)
-* [Usage](getting-started/usage.md)
+* [Creating and Updating my Experiments](getting-started/usage.md)
 * [Your First Experiment](getting-started/your-first-experiment.md)
 
 ## Community Demos

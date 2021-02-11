@@ -3,7 +3,7 @@ id: usage
 title: Usage
 ---
 
-# Usage
+# Creating and Updating my Experiments
 
 `create-empirica-app` requires Node.js &gt;= 8. If you don't already have Node.js 8+ setup, we recommend you use the official installer: [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
 
