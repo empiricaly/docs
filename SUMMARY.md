@@ -11,11 +11,11 @@
 
 ## Conceptual Overview <a id="overview"></a>
 
-* [Randomization & Batches](overview/randomization-and-batches.md)
 * [FAQ](overview/faq.md)
 * [Concepts](overview/concepts.md)
 * [Game Life Cycle](overview/lifecycle/README.md)
   * [Detailed Life Cycle](overview/lifecycle/detailed-life-cycle.md)
+* [Randomization & Batches](overview/randomization-and-batches.md)
 * [API](overview/api.md)
 
 ## Community Demos
