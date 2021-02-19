@@ -8,6 +8,7 @@
   * [Windows Instructions](getting-started/setup/windows-instructions.md)
 * [Creating and Updating my Experiments](getting-started/quick-start.md)
 * [Your First Experiment](getting-started/your-first-experiment.md)
+* [How can I quickly test someone else's experiment?](getting-started/quick-test.md)
 
 ## Conceptual Overview <a id="overview"></a>
 
