@@ -806,11 +806,13 @@ Another solution is to create the groups outside of Empirica and invite them one
 
 Upcoming updates to Empirica will propose novel solutions to this problem.
 
-### Players can't play a second game once they have finished the first one. Can I allow them to play again?
+### Retiring Players: How players can play again, even if they got gameFull, LobbyTimedOut, etc.
 
-Players can only play once. If there was a problem, or if you want players to play again, you can _retire_ them which allows them to play again.
+Players can only play once. If there was a problem \(e.g., the lobby timed out or the game was full\), or if you want players to play again, you can _retire_ them which allows them to play again.
 
-In the **Admin Panel**,  in the **monitoring tab**, in the **players tab**, you can see the status of every Player. At the bottom of the page, you can select a type of **exit status** and retire every player with that status. ****
+In the **Admin Panel**,  in the **monitoring tab**, in the **players tab**, you can see the status of every Player. At the bottom of the page, you can select a type of **exit status** and retire every player with that status.
+
+Once _retired_, players can refresh their page/return to the link of your game and they will be randomly allocated to a game with the same treatment as before. They are allocated to a game with the same treatment so that they don't discover a game with different conditions or instructions.
 
 ### I tried to retire a player but got this error: Failed to return players: Error: ID cannot exceed 256 characters in players update \[400\], what should I do?
 
