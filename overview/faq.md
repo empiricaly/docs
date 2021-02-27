@@ -676,6 +676,16 @@ Each Exit Step has a name set by `static stepName = "";` and players can only mo
 
 If you wanted multiple pages within the Exit Steps that players can navigate through, you could create a component within one Exit Step that has different components to form "pages" and with a state that knows which page it is at and navigating to and from.
 
+### Can a manually sent a player to an exit step?
+
+You can have a piece of code to manually send a player to an exit stage if they do something \(e.g., you want to give them a quit button\) by using:
+
+```text
+player.exit("name of exit step")
+```
+
+where the string is the name of the exit stage you want to send them to.
+
 ### How can I use bots?
 
 In the `server/bots.js` you can create bots for them to participate in your games.
