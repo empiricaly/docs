@@ -15,11 +15,15 @@ If you haven't already:
 
 ### Preparing their app
 
-Clone the repository with their experiment to a local repository on your device. In the command line run this to install all the Node packages:
+Clone the repository with their experiment to a local repository on your device. 
+
+In the command line run this to install all the Node packages:
 
 ```text
 meteor npm install
 ```
+
+If you are re-downloading \(e.g., you pull from the repository\) a version that has had changes in terms of its packages, you need to run this line again.
 
 ### Running the app locally
 
