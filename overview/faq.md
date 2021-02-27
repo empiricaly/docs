@@ -816,9 +816,11 @@ In the **Admin Panel**,  in the **monitoring tab**, in the **players tab**, you 
 
 This means that the player id of the player was too long. If you go to your data base you can find that player and modify their player id so that it is not as long.
 
-### Where can I record player responses?
+### Where can I record player data?
 
-One way of recording the data of players' responses is to set them to the Player prop itself. You can do so with this command:
+#### To the player
+
+One way of recording the data of players' responses is to set them to the `player` prop itself. You can do so with this command:
 
 ```text
 player.set("name of property", value)
@@ -830,7 +832,39 @@ You can retrieve what you have set as a specific property/answer for the player 
 player.get("name of property")
 ```
 
-Everything you set to the Player will be accessible in the [data when you download it](faq.md#where-can-i-download-the-data).
+This will be accessible in the `player` collection of your database \(see how to [download your data](faq.md#where-can-i-download-the-data)\).
+
+#### To the player.stage
+
+One way of recording the data of players' responses is to set them to the `player.stage` prop to identify a particular data/response of a particular player to a particular stage. You can do so with this command:
+
+```text
+player.stage.set("name of property", value)
+```
+
+You can retrieve what you have set as a specific property/answer with:
+
+```text
+player.stage.get("name of property")
+```
+
+This will be accessible in the `player-stages` collection of your database \(see how to [download your data](faq.md#where-can-i-download-the-data)\).
+
+#### To the player.round
+
+One way of recording the data of players' responses is to set them to the `player.round` prop to identify a particular data/response of a particular player to a particular round. You can do so with this command:
+
+```text
+player.round.set("name of property", value)
+```
+
+You can retrieve what you have set as a specific property/answer with:
+
+```text
+player.round.get("name of property")
+```
+
+This will be accessible in the `player-rounds` collection of your database \(see how to [download your data](faq.md#where-can-i-download-the-data)\).
 
 ### Where can I download the data?
 
