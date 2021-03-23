@@ -4,7 +4,7 @@ description: How to quickly set up an Empirica experiment locally to test it
 
 # How can I quickly test someone else's experiment?
 
-You might want to quickly look at what someone's experiment, you might be collaborating with others who might not be involved in the coding of the experiment but still want to test it locally, or you might want to copy/tweak these instructions into a `readme.md` file on your repository for people who come across your experiment.
+You might want to quickly look at someone's experiment, you might be collaborating with others who might not be involved in the coding of the experiment but still want to test it locally, or you might want to copy/tweak these instructions into a `readme.md` file on your repository for people who come across your experiment.
 
 ### General  Setup
 
