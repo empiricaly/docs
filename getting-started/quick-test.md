@@ -6,16 +6,16 @@ description: How to quickly set up an Empirica experiment locally to test it
 
 You might want to quickly look at someone's experiment, you might be collaborating with others who might not be involved in the coding of the experiment but still want to test it locally, or you might want to copy/tweak these instructions into a `readme.md` file on your repository for people who come across your experiment.
 
-### General  Setup
+## General  Setup
 
 If you haven't already:
 
 * Install `Node.js` and `npm` here: [https://nodejs.org/en/](https://nodejs.org/en/)
 * Install `Meteor` here: [https://www.meteor.com/install](https://www.meteor.com/install)
 
-### Preparing their app
+## Preparing their app
 
-Clone the repository with their experiment to a local repository on your device. 
+Clone the repository with their experiment to a local repository on your device.
 
 In the command line run this to install all the Node packages:
 
@@ -25,7 +25,7 @@ meteor npm install
 
 If you are re-downloading \(e.g., you pull from the repository\) a version that has had changes in terms of its packages, you need to run this line again.
 
-### Running the app locally
+## Running the app locally
 
 You can now run the app on your local machine with:
 
@@ -41,7 +41,7 @@ You can access the admin panel here: [https:/localhost:3000/admin](https:/localh
 
 Log in with the _username_ and _password_ provided in the command line.
 
-### Loading the factors and treatments
+## Loading the factors and treatments
 
 To use the app, you usually need to use treatments and factors. Some might be prepared in a `.yaml` file \(e.g., `factors.yaml`\). In the **admin panel**:
 
@@ -50,7 +50,7 @@ To use the app, you usually need to use treatments and factors. Some might be pr
 * select the `.yaml` file you want to import the factors and treatments from
 * wait a few seconds for the factors and treatments to be imported
 
-### Testing the app
+## Testing the app
 
 To run a game create a new `batch` with the games of treatments you want to use and click start on the batch.
 
