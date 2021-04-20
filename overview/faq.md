@@ -116,7 +116,7 @@ In your cluster, click _collections_ and then _create database_ where you will s
 
 In your cluster, click _connect_, then click _connect your application_. It will open a window where you should select _Node.js_ as the driver. It also presents a **URI** that you will need to copy to connect your app to your database.
 
-You do not need the `?retryWrites=true&w=majority` part.
+You need`?retryWrites=true&w=majority` part for the [resilience of your app](https://docs.atlas.mongodb.com/resilient-application/).
 
 The important part that this URI provides you is the part between the `@` and the `<dbname>`, it is the **connection**.
 
@@ -125,7 +125,7 @@ In your [settings file](faq.md#what-is-the-settings-json), you will have to add 
 ```text
     "galaxy.meteor.com": {
         "env": {
-            "MONGO_URL": "mongodb+srv://<read&write username>:<read&write password>@<connection>/<database name>",
+            "MONGO_URL": "mongodb+srv://<read&write username>:<read&write password>@<connection>/<database name>?retryWrites=true&w=majority",
             "MONGO_OPLOG_URL": "mongodb+srv://<oplog username>:<oplog password>@<connection>/local"
         }
     },
