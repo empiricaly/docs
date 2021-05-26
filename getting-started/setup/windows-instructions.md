@@ -1,6 +1,6 @@
-# Windows Instructions
+# Windows WSL Instructions
 
-## Step 1.  Install WSL 2 and Ubuntu 20.04 \(The Hard Part\)
+## Step 1.  Install WSL 2 and Ubuntu 20.04
 
 1. Follow either the written instructions or video tutorial below to install WLS2.  
 2. During this process, select "Ubuntu 20.04" as your Linux version.
@@ -32,8 +32,6 @@
 
 ![](../../.gitbook/assets/3.png)
 
-
-
 ## Step 2.  Install NVM
 
 _Note: Copy these commands and then paste into WLS2 by right-clicking on the terminal._
@@ -46,8 +44,6 @@ source ~/.profile  # Reload system environment
 nvm install lts/erbium
 ```
 
-
-
 ## Step 3.  Editing Files in WLS2
 
 In order to access your WLS2 file directory, run the following command in WLS2:
@@ -57,6 +53,10 @@ explorer.exe .
 ```
 
 This will allow you to browse WLS2 as if it were another computer on a local network.
+
+### Using code editors
+
+Different [code editors](../../tips-and-tricks/code-editors.md) \(such as VSCode\) will have commands that you can run to open them in the current directory \(e.g., `code .`\). This helps make for a better coding experience in the WSL.
 
 
 

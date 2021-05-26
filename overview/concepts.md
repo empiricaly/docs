@@ -1,10 +1,11 @@
 ---
 id: concepts
 title: Concepts
-description: This document goes over the main concepts of Empirica.
 ---
 
 # Concepts
+
+_Elements on this page might refer to the f_[_ile structure_](structure.md)_, the_ [_life cycle_](lifecycle.md)_, or the_ [_API_ ](api.md)_of an Empirica experiment._
 
 ## Game
 
@@ -14,7 +15,7 @@ The _Intro Steps_ are when Players arrive in the game. They can read instruction
 
 ## Player
 
-Players are users participating in a Game. A game must have a least 1 Player. Each Player entry iin the database will contain information such as their last login, their unique ID, the ID of the Game they are participating in, which steps they have accomplished, and any other data you additionally assign to Players \(e.g., an avatar to represent the Player\). 
+Players are users participating in a Game. A game must have a least 1 Player. Each Player entry in the database will contain information such as their last login, their unique ID, the ID of the Game they are participating in, which steps they have accomplished, and any other data you additionally assign to Players \(e.g., an avatar to represent the Player\). 
 
 ## Batch
 
@@ -32,9 +33,9 @@ Rounds do not have a name, they have an order number \(1, 2, 3...\).
 
 ## Stage
 
-A round may contain 1 or more stages. A stage has a duration, a name and a display name.
+A Round may contain 1 or more stages. A stage has a duration, a name and a display name.
 
-The `name` is the programatic reference that can later be used in the UI code to differentiate stages. The `displayName` on the other hand is used in the UI, and it a clean human readable name. For example, a stage name might be "_guess_", while the display name might be "_Guess A Number_".
+The `name` is the programmatic reference that can later be used in the UI code to differentiate stages. The `displayName` on the other hand is used in the UI, and it a clean human readable name. For example, a stage name might be "_guess_", while the display name might be "_Guess A Number_".
 
 The `durationInSeconds` is set in seconds, with a minimum of 5 seconds, and no maximum. You can also allow Players to _submit_ a stage, which marks it as done for the given player. When all players have submitted, the stage is considered done. If the stage timer runs out the stage is also considered done, whichever happens first.
 
@@ -86,7 +87,7 @@ The Game Lobby is configured by lobby configs for common scenarios. It contains 
 
 The Intro Steps are pages shows to the user after registering and before the game or game lobby. These steps can be configured by the game designer to contain whatever is needed: instructions, a quiz, forms, etc.
 
-The set of steps can be altered depending on the treatment assigned to the current player.
+The set of steps can be altered depending on the treatment assigned to the current player or the treatments.
 
 The Intro Steps are **asynchronous** \(each player completes these steps at their own pace\).
 

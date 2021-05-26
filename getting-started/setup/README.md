@@ -6,22 +6,22 @@ sidebar_label: Quick Start
 
 # Setup
 
-### **MacOS / Linux Setup**
-
 1. Install Node.js via [https://nodejs.org/en/](https://nodejs.org/en/) \(download and install the LTS bundle on the left\) 
 2. Install Meteor with instructions at [https://www.meteor.com/install](https://www.meteor.com/install)
 
-That's it, you're done!  Proceed to the [Quick Start](../quick-start.md).
+That's it, you're done!  Proceed to creating your experiment:
 
-\*\*\*\*
+{% page-ref page="../quick-start.md" %}
 
-### **Windows 10 Setup**
+### **A note about Windows 10 Setup**
 
 Empirica is build on industry-standard open-source web technologies which run best in Unix-like operating systems such as Linux and MacOS.   ****
 
-In order to run Empirica reliably in Windows, you will need to enable developer settings within advanced Windows settings and download/install the new version of Windows Subsystem for Linux \(WLS2\).
+Running Meteor apps on Windows can be unreliable, as apps struggle to install and launch. Whilst stopping and trying again multiple times \(as well as making sure there are no processes that slow down the installation of the Meteor files\) might work, it is not recommended.
 
-If you are a Windows user and get stuck at any point in the development process, please contact joshua.becker@ucl.ac.uk or join the Slack channel for community-based technical support on a wide range of topics.
+In order to run Empirica reliably in Windows, you will need to enable developer settings within advanced Windows settings and download/install the new version of Windows Subsystem for Linux \(WLS2\). 
 
-Proceed to the next section for instructions on installing and using Empirica in Windows.
+_If you are a Windows user and get stuck at any point in the development process, please contact joshua.becker@ucl.ac.uk or join the Slack channel for community-based technical support on a wide range of topics._
+
+{% page-ref page="windows-instructions.md" %}
 

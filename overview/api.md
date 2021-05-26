@@ -5,7 +5,9 @@ title: API
 
 # API
 
-This document describes Empirica's [server](), [client]() and [shared]() APIs.
+_Elements on this page refer to the f_[_ile structure_](structure.md)_,_ [_concepts_](concepts.md)_, and_ [_life cycle_](lifecycle.md) _of an Empirica experiment._
+
+This document describes Empirica's [server](api.md#server), [client](api.md#client) and [shared ](api.md#shared)APIs.
 
 ## Server
 
@@ -15,7 +17,7 @@ The `gameInit` callback is called just before a game starts, when all players ar
 
 One \(and one only\) gameInit callback is required for Empirica to work.
 
-The callback receives one argument, the [`game` object](), which gives acces to the `players` and the treatment for this game.
+The callback receives one argument, the [`game` object](api.md#game-object), which gives access to the `players` and the treatment for this game.
 
 It also offers the `addRound()` method, which allows to add a round to the `game`. The returned Round object will implement the `addStage(stageArgs)` method, which allows to add a Stage to the Round. The `stageArgs` object to be passed to the stage creation method must contain:
 
@@ -53,7 +55,7 @@ Empirica.gameInit(game => {
 });
 ```
 
-### _**Game Hooks**_
+### **Game Callbacks**
 
 Game hooks are optional methods attached to various events throughout the game life cycle to update data on the server-side.
 
@@ -61,7 +63,7 @@ Contrary to client side data updates, sever-side updates are synchronous, there 
 
 ### `Empirica.onGameStart(callback)`
 
-`onGameStart` is triggered once per game, before the game starts, and before the first [`onRoundStart`](). It receives the [`game` object](). Contrary to [`gameInit`](), the Game has been created at this point.
+`onGameStart` is triggered once per game, before the game starts, and before the first [`onRoundStart`](). It receives the [`game` object](api.md#game-object). Contrary to [`gameInit`](), the Game has been created at this point.
 
 #### Example
 
@@ -77,7 +79,7 @@ Empirica.onGameStart(game => {
 
 ### `Empirica.onRoundStart(callback)`
 
-`onRoundStart` is triggered before each round starts, and before [`onStageStart`](). It receives the same options as [`onGameStart`](empiricaongamestartcallback), and the [round]() that is starting.
+`onRoundStart` is triggered before each round starts, and before [`onStageStart`](). It receives the same options as [`onGameStart`](empiricaongamestartcallback), and the [round](api.md#round-object) that is starting.
 
 #### Example
 
@@ -89,7 +91,7 @@ Empirica.onRoundStart((game, round) => {
 
 ### `Empirica.onStageStart(callback)`
 
-`onRoundStart` is triggered before each stage starts. It receives the same options as [`onRoundStart`](empiricaonroundstartcallback), and the [stage]() that is starting.
+`onRoundStart` is triggered before each stage starts. It receives the same options as [`onRoundStart`](empiricaonroundstartcallback), and the [stage](api.md#stage-object) that is starting.
 
 #### Example
 
@@ -101,7 +103,7 @@ Empirica.onStageStart((game, round, stage) => {
 
 ### `Empirica.onStageEnd(callback)`
 
-`onStageEnd` is triggered after each stage. It receives the current [game](), the current [round](), and [stage]() that just ended.
+`onStageEnd` is triggered after each stage. It receives the current [game](api.md#game-object), the current [round](api.md#round-object), and [stage](api.md#stage-object) that just ended.
 
 #### Example
 
@@ -113,7 +115,7 @@ Empirica.onStageEnd((game, round, stage) => {
 
 ### `Empirica.onRoundEnd(callback)`
 
-`onRoundEnd` is triggered after each round. It receives the current [game](), and the [round]() that just ended.
+`onRoundEnd` is triggered after each round. It receives the current [game](api.md#game-object), and the [round](api.md#round-object) that just ended.
 
 #### Example
 
@@ -151,7 +153,7 @@ Empirica.onGameEnd(game => {
 
 ### _**Change Callbacks**_
 
-[onSet](), [onAppend]() and [onChange]() are called on every single update made by all players in each game, so they can rapidly become **computationally expensive** and have the potential to seriously slow down the app. Use wisely.
+[onSet](api.md#empirica-onset-callback), [onAppend](api.md#empirica-onappend-callback) and [onChange](api.md#empirica-onchange-callback) are called on every single update made by all players in each game, so they can rapidly become **computationally expensive** and have the potential to seriously slow down the app. Use wisely.
 
 It is very useful to be able to react to each update a user makes. Try nontheless to limit the amount of computations and database saves done in these callbacks. You can also try to limit the amount of calls to `set()` and `append()` you make \(avoid calling them on a continuous drag of a slider for example\) and inside these callbacks use the `key` argument at the very beginning of the callback to filter out which keys your need to run logic against.
 
@@ -279,7 +281,7 @@ All callbacks are called with the following arguments:
 
 #### Example
 
-```javascript
+```jsx
 Empirica.bot("bob", {
   onStageTick(bot, game, round, stage, secondsRemaining) {
     let score = 0;
@@ -309,14 +311,14 @@ _Component_ will receive the following props:
 
 | Prop | Type | Description |
 | :--- | :--- | :--- |
-| `game` | [Game]() | The current [game](). |
-| `player` | [Player]() | The current [player](). |
-| `round` | [Round]() | The current [round](). |
-| `stage` | [Stage]() | The current [stage](). |
+| `game` | [Game](api.md#game-object) | The current game. |
+| `player` | [Player](api.md#player-object) | The current player. |
+| `round` | [Round](api.md#round-object) | The current round. |
+| `stage` | [Stage](api.md#stage-object) | The current stage. |
 
 #### Example
 
-```javascript
+```jsx
 const Round = ({ player, game, round, stage }) => (
   <div className="round">
     <div className="profile">{player.id}: {player.get("score")}</p>
@@ -342,7 +344,7 @@ _Component_ will receive the following props:
 
 #### Example
 
-```javascript
+```jsx
 const Consent = ({ onConsent }) => (
   <div className="consent">
     <p>This experiment is part of...</p>
@@ -398,8 +400,8 @@ _Component_ will receive the following props:
 
 | Prop | Type | Description |
 | :--- | :--- | :--- |
-| `game` | [Game]() | The current [game](). |
-| `player` | [Player]() | The current [player](). |
+| `game` | [Game](api.md#game-object) | The current game. |
+| `player` | [Player](api.md#player-object) | The current player. |
 
 #### Example
 
@@ -424,12 +426,12 @@ _Component_ will receive the following props:
 
 | Prop | Type | Description |
 | :--- | :--- | :--- |
-| `gameLobby` | [GameLobby]() | The current [game lobby](). |
-| `player` | [Player]() | The current [player](). |
+| `gameLobby` | [GameLobby](api.md#gamelobby-object) | The current game lobby. |
+| `player` | [Player](api.md#player-object) | The current player. |
 
 #### Example
 
-```javascript
+```jsx
 const Lobby = ({ player, gameLobby }) => (
   <header className="lobby">
     <h1>Please wait until the game is ready...</h1>
@@ -452,7 +454,7 @@ _Component_ will NOT receive any props.
 
 #### Example
 
-```javascript
+```jsx
 const Header = () => (
   <header className="app-header">
     <img src="/my-logo.png" />
@@ -472,14 +474,14 @@ _Component_ will receive the following props:
 
 | Prop | Type | Description |
 | :--- | :--- | :--- |
-| `game` | [Game]() | The current [game](). |
-| `player` | [Player]() | The current [player](). |
-| `round` | [Round]() | The current [round](). |
-| `stage` | [Stage]() | The current [stage](). |
+| `game` | [Game](api.md#game-object) | The current game. |
+| `player` | [Player](api.md#player-object) | The current player. |
+| `round` | [Round](api.md#round-object) | The current round. |
+| `stage` | [Stage](api.md#stage-object) | The current stage. |
 
 #### Example
 
-```javascript
+```jsx
 const Breadcrumb = ({ round, stage }) => (
   <ul className="breadcrumb">
     <li>Round {round.index + 1}</li>
@@ -513,10 +515,10 @@ Meteor.startup(() => {
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| `index` | Number | An auto-increment number assignmed to each Game in order \(1, 2, 3...\) |
+| `index` | Number | An auto-increment number assigned to each Game in order \(1, 2, 3...\) |
 | `treatment` | Object \(key: String, value: String or Integer\) | An object representing the Factors set on this game, e.g. `{ "playerCount": 12 }`. |
-| `players` | Array of [Player objects]() | Players participating in this Game. |
-| `rounds` | Array of [Round objects]() | Rounds composing this Game. |
+| `players` | Array of [Player objects](api.md#player-object) | Players participating in this Game. |
+| `rounds` | Array of [Round objects](api.md#round-object) | Rounds composing this Game. |
 | `createdAt` | Date | Time at which the game was created which corresponds approximately to the time at which the Game started. |
 
 ### `Round` object
@@ -524,14 +526,14 @@ Meteor.startup(() => {
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `index` | Object | The 0 based position of the current round in the ordered list of rounds in a game. |
-| `stages` | Array of [Stage objects]() | Stages composing this Round. |
+| `stages` | Array of [Stage objects](api.md#stage-object) | Stages composing this Round. |
 
 ### `Stage` object
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `index` | Object | The 0 based position of the current stage in the ordered list of a **all** of the game's stages. |
-| `name` | String | Programatic name of stage \(i.e. to be used in code, e.g `if (name === "outcome") ...`\). |
+| `name` | String | Programmatic name of stage \(i.e. to be used in code, e.g `if (name === "outcome") ...`\). |
 | `displayName` | String | Human name of stage \(i.e. to be showed to the Player, e.g "Round Outcome"\). |
 | `durationInSeconds` | Integer | The stage duration, in seconds. |
 | `startTimeAt` | Date | Time at which the stage started. \(only set if stage has already started, i.e. not set in `onStageStart`\). |
@@ -540,9 +542,9 @@ Meteor.startup(() => {
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| `index` | Number | An auto-increment number assignmed to each Player in order \(1, 2, 3...\) |
+| `index` | Number | An auto-increment number assigned to each Player in order \(1, 2, 3...\) |
 | `id` | String | The ID the player used to register \(e.g. MTurk ID\). |
-| `urlParams` | Object \(key/value: String\) | Paramaters that were set on the URL when the user registered. |
+| `urlParams` | Object \(key/value: String\) | Parameters that were set on the URL when the user registered. |
 | `bot` | String | Name of the bot used for this player, if the player is a bot \(e.g. `Alice`\). |
 | `readyAt` | Date | Time at witch the player became ready \(done with intro steps\). |
 | `exitAt` | Date | Time when the player exited the Game \(whether the game ended normally or not, see exitStatus\). |
@@ -550,7 +552,7 @@ Meteor.startup(() => {
 | `online` | Boolean | True if the player is currently online. |
 | `idle` | Boolean | True if the player is currently online but idle. Idleness is defined as either the page not being active \(on another tab/window\) or not detecting any activity \(mouse/keyboard\) for more than 60s. |
 | `lastActivityAt` | Date | Time when the player was last seen online and active \(not idle\). Server only \(this is not accessible on the client at the moment\). |
-| `lastLogin.at` | Date | Time the player last come online \(registered, reopened page and auto-login kicked in or reentered player ID – if they were forgotten\). |
+| `lastLogin.at` | Date | Time the player last come online \(registered, reopened page and auto-login kicked in or re-entered player ID – if they were forgotten\). |
 | `lastLogin.ip` | String | [IP address](https://developer.mozilla.org/en-US/docs/Glossary/IP_Address) of player on last connection. |
 | `lastLogin.userAgent` | String | [User-Agent](https://developer.mozilla.org/en-US/docs/Glossary/User_agent) of player on last connection. |
 

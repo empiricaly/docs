@@ -5,19 +5,33 @@
 ## Getting Started
 
 * [Setup](getting-started/setup/README.md)
-  * [Windows Instructions](getting-started/setup/windows-instructions.md)
-* [Creating and Updating my Experiments](getting-started/quick-start.md)
-* [Your First Experiment](getting-started/your-first-experiment.md)
-* [How can I quickly test someone else's experiment?](getting-started/quick-test.md)
+  * [Windows WSL Instructions](getting-started/setup/windows-instructions.md)
+* [Creating your experiment](getting-started/quick-start.md)
+* [Running your experiment](getting-started/quick-test.md)
+* [Updating your experiment](getting-started/updating-your-experiment.md)
+
+## Guides
+
+* [Tutorial: Your First Experiment](guides/your-first-experiment.md)
+* [The Settings File](guides/the-settings-file.md)
+* [Deploying your experiment](guides/deploying-my-experiment/README.md)
+  * [Database](guides/deploying-my-experiment/database.md)
+  * [Hosting](guides/deploying-my-experiment/hosting.md)
 
 ## Conceptual Overview <a id="overview"></a>
 
-* [FAQ](overview/faq.md)
+* [Structure](overview/structure.md)
+* [Game Life Cycle](overview/lifecycle.md)
 * [Concepts](overview/concepts.md)
-* [Game Life Cycle](overview/lifecycle/README.md)
-  * [Detailed Life Cycle](overview/lifecycle/detailed-life-cycle.md)
 * [Randomization & Batches](overview/randomization-and-batches.md)
 * [API](overview/api.md)
+
+## FAQ
+
+* [I need help!](faq/about-empirica.md)
+* [Experiment Set Up](faq/setup-deployment-and-hosting.md)
+* [The Processes and Elements of an Empirica Experiment](faq/the-processes-and-elements-of-an-empirica-experiment.md)
+* [Managing Players and Games](faq/faq.md)
 
 ## Community Demos
 
