@@ -518,7 +518,7 @@ Meteor.startup(() => {
 | `index` | Number | An auto-increment number assigned to each Game in order \(1, 2, 3...\) |
 | `treatment` | Object \(key: String, value: String or Integer\) | An object representing the Factors set on this game, e.g. `{ "playerCount": 12 }`. |
 | `players` | Array of [Player objects](api.md#player-object) | Players participating in this Game. |
-| `rounds` | Array of [Round objects](api.md#round-object) | Rounds composing this Game. |
+| `rounds` | Array of [Round objects](api.md#round-object) | On the server side, this will show every round that makes up the game. But on the client side, this will only show the current round.  |
 | `createdAt` | Date | Time at which the game was created which corresponds approximately to the time at which the Game started. |
 
 ### `Round` object
