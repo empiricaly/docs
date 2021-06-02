@@ -12,7 +12,10 @@
 
 ## Guides
 
-* [Tutorial: Your First Experiment](guides/your-first-experiment.md)
+* [Tutorial: Your First Experiment](guides/tutorial-your-first-experiment/README.md)
+  * [Part 1: Creating an Estimation Task](guides/tutorial-your-first-experiment/your-first-experiment.md)
+  * [Part 2: Adding Chats](guides/tutorial-your-first-experiment/part-2-adding-chats.md)
+  * [Part 3: Adding Bots](guides/tutorial-your-first-experiment/part-3-adding-bots.md)
 * [The Settings File](guides/the-settings-file.md)
 * [Deploying your experiment](guides/deploying-my-experiment/README.md)
   * [Database](guides/deploying-my-experiment/database.md)

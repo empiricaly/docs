@@ -269,7 +269,7 @@ If `"playerIdParamExclusive"` is set to `true` , then players can only ever part
 
 There is a `Timer.jsx` component that represents the stage timer and shows players how much time is left at that stage. 
 
-For the Timer to work, the `stage` has to be passed down to it as a prop. For example, in the `PlayerProfile.jsx` of [your first Empirica experiment](../guides/your-first-experiment.md):
+For the Timer to work, the `stage` has to be passed down to it as a prop. For example, in the `PlayerProfile.jsx` of [your first Empirica experiment](../guides/tutorial-your-first-experiment/your-first-experiment.md):
 
 ```jsx
 return (
@@ -355,7 +355,7 @@ player.stage.submitted
 
 ### How can I get rid of the "Waiting on the other players. Please wait until all players are ready"?
 
-This message is not required, but was added manually in the [`Your First Empirica` t](../guides/your-first-experiment.md)utorial.
+This message is not required, but was added manually in the [`Your First Empirica` t](../guides/tutorial-your-first-experiment/your-first-experiment.md)utorial.
 
  As shown in the previous two FAQs, it is possible to use the information that a Player has submitted their Stage to render something different than before they submit their Stage. In your first experiment, this happens in the `TaskResponse.jsx`.  You can see that two **render functions** have been created: `renderSubmitted()` and `renderInput()`. In the `render()` part of the component, you can see that there is an **if conditional** that determines whether the render function used will be `renderSubmitted()`, which will prevent the `renderSubmitted()` from being called \(and thereby hiding the slider and method of response from the player\):
 

@@ -17,7 +17,7 @@ Empirica is the one method that provides enough flexibility to build any type of
 
 Visit the [Getting Started](getting-started/setup/) part of this documentation to get you started. 
 
-Follow our [first experiment tutorial](guides/your-first-experiment.md).
+Follow our [first experiment tutorial](guides/tutorial-your-first-experiment/your-first-experiment.md).
 
 To learn more about the parts of an Empirica app \(e.g., what are Games, Rounds, and Players?\) visit the [Concepts ](overview/concepts.md)page.
 
