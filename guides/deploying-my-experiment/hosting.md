@@ -32,7 +32,13 @@ meteor whoami
 
 A **hostname** is the name that the public will use to access your app. 
 
-Part of the hostname is the **domain name**. You can use a custom domain name if you own one, or use one of those offered by Galaxy. If you are using the offered domain, use `.meteorapp.com` for apps deployed to the US East region, `.eu.meteorapp.com` for apps deployed to the EU West region, or `.au.meteorapp.com` for apps deployed to the Asia-Pacific region
+Part of the hostname is the **domain name**. You can use a custom domain name if you own one, or use one of those offered by Galaxy. 
+
+If you are using the offered domain, use:
+
+*  `.meteorapp.com` for apps deployed to the US East region
+*  `.eu.meteorapp.com` for apps deployed to the EU West region
+*  `.au.meteorapp.com` for apps deployed to the Asia-Pacific region
 
 For example, a complete hostname with a Galaxy offered domain could be: `my-game-study-example.meteorapp.com`
 
