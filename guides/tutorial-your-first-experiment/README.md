@@ -4,7 +4,7 @@ This is the tutorial to get started with Empirica. You will discover Empirica's 
 
 If you want to compare your work to a finished version of the tutorial, you can find it [on GitHub](https://github.com/empiricaly/your-first-experiment/).
 
-It is in three parts, each part builds on the previous one:
+Each part builds on the previous one:
 
 {% page-ref page="your-first-experiment.md" %}
 

@@ -5,7 +5,7 @@
 If you download an app from a GitHub, such as the **community demos**, it is likely that there will be some missing parts:
 
 * Not all of the NPM, Meteor, and React.js [packages will be installed](faq.md#how-can-i-make-sure-all-the-packages-in-my-app-are-installed).
-* There will be no [settings file](../guides/the-settings-file.md), you might need to create your own and [connect it to your own database](faq.md#how-do-i-connect-my-app-to-mongodb-atlas).
+* There will be no [settings file](../guides/the-settings-file/), you might need to create your own and [connect it to your own database](faq.md#how-do-i-connect-my-app-to-mongodb-atlas).
 * You might need to [import the treatments and factors](faq.md#can-i-import-and-export-my-treatments-factors-and-lobby-settings).
 
 

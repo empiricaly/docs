@@ -1,8 +1,8 @@
-# Part 3: Adding Bots
+# Part 5: Adding Bots
 
 ## Adding bots in the factors and treatments
 
-To add bots you need to create and set a `botsCount` \(integer\) factor to the number of bots you want in your study. Then create treatments that use this factor.
+To add bots you need to go to the admin panel and create `botsCount` \(the name is important this time!\) factor as an integer and set it up with the number of bots you want in your study. Then create treatments that use this factor.
 
 {% hint style="info" %}
 Bots will replace one of the player slots. So if you want two human players and one bot, you need to create a game with a `playerCount` of  3.
@@ -10,7 +10,7 @@ Bots will replace one of the player slots. So if you want two human players and 
 
 ## Programming a bot
 
-In the `server/bots.js` you can create bots to be use based on the number of set in the `botsCount` factor.
+In the `server/bots.js` you can create bots to be used based on the number of set in the `botsCount` factor.
 
 Bots will be added to the `game.players` in the game. They have some special characteristics such as a `bot` name.
 
@@ -60,7 +60,7 @@ onStageTick(bot, game, round, stage, secondsRemaining) {
 
 ### Bots and chats
 
-If there is a chat, we want the bot to send a random message every second.
+If there is a chat, we want the bot to send a random message every 20 seconds.
 
 To select a random message from an array we need to create a function to make a random choice. Let's add this function to a separate `.js` file on the server side: `server/randomFunctions.js` :
 
@@ -80,7 +80,7 @@ Now, let's import this function at the top of the `server/bots.js` file:
 import { choice } from "./randomFunctions";
 ```
 
-Now lets also add a list of messages to randomly chose from at the top of the `server/bots.js` file:
+Now lets also add a list of messages to randomly chose from at the top of the `server/bots.js` file \(but below the import statements\):
 
 ```jsx
 const botLanguage = [
@@ -88,7 +88,7 @@ const botLanguage = [
   "That's a good question!",
   "What do you think the correct answer is?",
   "This experiment is fun",
-  "I too do human things"
+  "I also do human things"
 ]
 ```
 
@@ -120,7 +120,7 @@ If the chat is empty we prepare an empty array, otherwise we take the messages i
 
 ## Next steps and future work
 
-In this tutorial, we have created a simple that prompts participants to complete numeric estimation tasks and allows them to revise their answers while observing the responses of other participants. We have also added chats and bots.
+In this tutorial, we have created a simple experiment that prompts participants to complete numeric estimation tasks and allows them to revise their answers while observing the responses of other participants. We have also added chats and bots.
 
 Right now, this app ONLY works for social conditions ; if you don't have any neighbors, things will look a bit weird because the stage name is called "Social Information". 
 
@@ -142,7 +142,7 @@ Here are some examples of how we can use Empirica features to expand the functio
 
 * If you want to use more complex network structures, you could store those in a
 
-  json format and import them in main.js
+  json/js format and import them in main.js
 
 There are also several very basic features from the Intro and Outro we haven't touched yet that you'll need to update:
 

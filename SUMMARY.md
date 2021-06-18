@@ -13,10 +13,13 @@
 ## Guides
 
 * [Tutorial: Your First Experiment](guides/tutorial-your-first-experiment/README.md)
-  * [Part 1: Creating an Estimation Task](guides/tutorial-your-first-experiment/your-first-experiment.md)
-  * [Part 2: Adding Chats](guides/tutorial-your-first-experiment/part-2-adding-chats.md)
-  * [Part 3: Adding Bots](guides/tutorial-your-first-experiment/part-3-adding-bots.md)
-* [The Settings File](guides/the-settings-file.md)
+  * [Part 1: Getting Started](guides/tutorial-your-first-experiment/your-first-experiment.md)
+  * [Part 2: Configuring the Experiment](guides/tutorial-your-first-experiment/part-2-configuring-the-experiment.md)
+  * [Part 3: Adding Social Information and New Factors](guides/tutorial-your-first-experiment/part-3-adding-social-information-and-new-factors.md)
+  * [Part 4: Adding Chats](guides/tutorial-your-first-experiment/part-2-adding-chats.md)
+  * [Part 5: Adding Bots](guides/tutorial-your-first-experiment/part-3-adding-bots.md)
+* [The Settings File](guides/the-settings-file/README.md)
+  * [Specifying Login Details](guides/the-settings-file/specifying-login-details.md)
 * [Deploying your experiment](guides/deploying-my-experiment/README.md)
   * [Database](guides/deploying-my-experiment/database.md)
   * [Hosting](guides/deploying-my-experiment/hosting.md)

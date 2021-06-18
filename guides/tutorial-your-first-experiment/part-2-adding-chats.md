@@ -1,10 +1,10 @@
-# Part 2: Adding Chats
+# Part 4: Adding Chats
 
 ## Installing the Empirica Chat
 
-First, you should stop running your experiment to [install a package for the Empirica chat](https://www.npmjs.com/package/@empirica/chat).
+First, you should stop running your experiment \(e.g., press **cntrl+c** in the command line\) to [install the package for the Empirica chat](https://www.npmjs.com/package/@empirica/chat).
 
-Run this in the command line:
+Install it by running this in the command line:
 
 ```text
 meteor npm install --save @empirica/chat
@@ -18,10 +18,63 @@ To add a chat to a component, you have to import it at the top of the `client/ga
 import { Chat } from "@empirica/chat";
 ```
 
-Then, still in the `client/game/SocialExposure.jsx` component, we add a chat component to the main render:
+Then, still in the `client/game/SocialExposure.jsx` component, we add a chat component by replacing the return of the main render with this code:
 
 ```jsx
-render() {
+    return (
+      <div className="social-exposure">
+        <h3 className="title">Social Information</h3>
+        <p className="title">
+          {
+            otherPlayers.length > 1
+              ? <strong>There are {otherPlayers.length} other players:</strong>
+              : <strong>There is one other player:</strong>
+          }
+        </p>
+        {otherPlayers.map(p => this.renderSocialInteraction(p))}
+        <div>
+          <p className="chat-title"><strong>Chat</strong></p>
+          <Chat player={player} scope={round} />
+        </div>
+      </div>
+    );
+```
+
+Note that we need to assign this `player` as a property of the chat. We also need to define a `scope`, which determines in which element of Empirica the chat is created \(the game, every round, every stage, etc.\). Here, we want one chat per round, so we set the scope to the `round`.
+
+This also means we need to call out the round from the props of this component. Replace this line in the main render:
+
+```jsx
+const { game, player } = this.props;
+```
+
+With this one:
+
+```jsx
+const { game, player, round } = this.props;
+```
+
+
+
+Overall, your `SocialExposure.jsx` component shoud look like this:
+
+```jsx
+import React from "react";
+import { Chat } from "@empirica/chat";
+
+export default class SocialExposure extends React.Component {
+  renderSocialInteraction(otherPlayer) {
+    // Get the value or return NA if no value was entered
+    const value = otherPlayer.round.get("value") ?? "NA";
+    return (
+      <div className="alter" key={otherPlayer._id}>
+        <img src={otherPlayer.get("avatar")} className="profile-avatar" />
+        Guess: {value}
+      </div>
+    );
+  }
+
+  render() {
     const { game, player, round } = this.props;
 
     const otherPlayers = game.players.filter(p =>
@@ -50,33 +103,9 @@ render() {
       </div>
     );
   }
-```
-
-Note that we need to assign this `player` as a property of the chat. We also need to define a `scope`, which determines in which element of Empirica the chat is created \(the game, every round, every stage, etc.\). Here, we want one chat per round, so we set the scope to the `round`.
-
-If you go to the `client/game/Round.jsx` you will see that the round is not passed down as a prop to the `SocialExposure` . We need to add this for our app to work:
-
-```jsx
-{
-  stage.name === "social" && (
-    <SocialExposure stage={stage} player={player} game={game} round={round} />
-  )
 }
+
 ```
-
-{% hint style="info" %}
-One way to avoid having to specify basic Empirica props from parent component to child component  like we just did is to use `{...this.props}` which will pass down all the parent's props to the child component.
-
-For example:
-
-```jsx
-{
-  stage.name === "social" && (
-    <SocialExposure {...this.props} />
-  )
-}
-```
-{% endhint %}
 
 ## Styling the chat
 
@@ -138,24 +167,13 @@ Add this bit of styling at the end of the `client/main.less` :
 
 ## Using factors to create conditions with and without chats:
 
-You might want to create condition where there are chats and a condition without chats. We can do that with Treatments and Factors. 
+You might want to create condition where there are chats and a condition without chats. We can do that with new Treatments and Factors. 
 
-Create a new `chat` factor as a `boolean` factor so it will be `true` or `false`.  Now  create a treatment with `chat` set to `true` and a treatment with `chat` set to `false`.
+Go back to the Admin Panel and create a new `chat` factor as a `boolean` factor so it will be `true` or `false`.  Now  create a treatment with `chat` set to `true` and a treatment with `chat` set to `false`.
 
-Now let's use this information render the chat only if the `chat` factor is set to `true` . Change the render of the  `SocialExposure.jsx` component:
+Now let's use this information render the chat only if the `chat` factor is set to `true` . Change the return of the main render of the  `SocialExposure.jsx` component with this code:
 
 ```jsx
-  render() {
-    const { game, player, round } = this.props;
-
-    const otherPlayers = game.players.filter(p =>
-      player.get("neighbors").includes(p.get("nodeId"))
-    );
-
-    if (otherPlayers.length === 0) {
-      return null;
-    }
-
     return (
       <div className="social-exposure">
         <h3 className="title">Social Information</h3>
@@ -175,10 +193,5 @@ Now let's use this information render the chat only if the `chat` factor is set 
         }
       </div>
     );
-  }
 ```
-
-## Next Step: Bots
-
-Players can now chat with each other about their responses. In the next part, we will have them chat with bots as well!
 
