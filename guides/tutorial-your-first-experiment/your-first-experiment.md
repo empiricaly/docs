@@ -569,6 +569,8 @@ First, create a multi-player game by adding a new factor value to playerCount \(
 
 In this example we're going to modify the default behavior so that \(a\) the social information only shows after participants have entered their initial response, and \(b\) social information shows only for a participant's network neighbors.
 
+Let's go back to `server/main.js` 
+
 Within each `round` are multiple `stages`. We can add more stages by returning to the `Empirica.gameInit` method and adding the following:
 
 ```javascript

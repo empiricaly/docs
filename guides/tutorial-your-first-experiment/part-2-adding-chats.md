@@ -12,13 +12,13 @@ meteor npm install --save @empirica/chat
 
 ## Adding a chat to the social stage
 
-To add a chat to a component, you have to import it at the top of this component:
+To add a chat to a component, you have to import it at the top of the `client/game/SocialExposure.jsx` component:
 
 ```jsx
 import { Chat } from "@empirica/chat";
 ```
 
-Then we add a chat component to the main render of the `client/game/SocialExposure.jsx` component:
+Then, still in the `client/game/SocialExposure.jsx` component, we add a chat component to the main render:
 
 ```jsx
 render() {
