@@ -8,6 +8,10 @@ Each part builds on the previous one:
 
 {% page-ref page="your-first-experiment.md" %}
 
+{% page-ref page="part-2-configuring-the-experiment.md" %}
+
+{% page-ref page="part-3-adding-social-information-and-new-factors.md" %}
+
 {% page-ref page="part-2-adding-chats.md" %}
 
 {% page-ref page="part-3-adding-bots.md" %}
