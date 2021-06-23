@@ -28,7 +28,5 @@ You can now read more about the running your experiment, the structure of an Emp
 
 {% page-ref page="../overview/structure.md" %}
 
-{% page-ref page="../guides/tutorial-your-first-experiment/your-first-experiment.md" %}
-
-
+{% page-ref page="../guides/tutorial-your-first-experiment/" %}
 
