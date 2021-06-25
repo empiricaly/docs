@@ -2,7 +2,7 @@
 
 ## Step 1.  Install WSL 2 and Ubuntu 20.04
 
-1. Follow either the written instructions or video tutorial below to install WLS2.  
+1. Follow either the written instructions or video tutorial below to install WSL2.  
 2. During this process, select "Ubuntu 20.04" as your Linux version.
 3. See our overview below for a summary with screenshots.
 
@@ -34,7 +34,7 @@
 
 ## Step 2.  Install NVM
 
-_Note: Copy these commands and then paste into WLS2 by right-clicking on the terminal._
+_Note: Copy these commands and then paste into WSL2 by right-clicking on the terminal._
 
 Enter the following commands into your Ubuntu terminal:
 
@@ -44,15 +44,15 @@ source ~/.profile  # Reload system environment
 nvm install lts/erbium
 ```
 
-## Step 3.  Editing Files in WLS2
+## Step 3.  Editing Files in WSL2
 
-In order to access your WLS2 file directory, run the following command in WLS2:
+In order to access your WSL2 file directory, run the following command in WSL2:
 
 ```text
 explorer.exe .
 ```
 
-This will allow you to browse WLS2 as if it were another computer on a local network.
+This will allow you to browse WSL2 as if it were another computer on a local network.
 
 ### Using code editors
 
