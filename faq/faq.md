@@ -180,7 +180,7 @@ But you might want to customise your Lobby even further \(e.g., change what it l
 
 * `gameLobby.treatment.playerCount` will give you how many players the Game expects
 * `gameLobby.queuedCount` will give you the total number of players queued for this game, including ready players and players currently going through the intro steps. 
-* `game.lobby.readyCount` will give you the number of players ready to play. They have completed the intro steps, and they are on the lobby page.
+* `gameLobby.readyCount` will give you the number of players ready to play. They have completed the intro steps, and they are on the lobby page.
 
 For a better idea of what you can do and customise, see the default version of the Lobby [here](https://github.com/empiricaly/meteor-empirica-core/blob/master/ui/components/GameLobby.jsx).
 
