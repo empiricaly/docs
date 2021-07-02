@@ -54,6 +54,10 @@ explorer.exe .
 
 This will allow you to browse WSL2 as if it were another computer on a local network.
 
+{% hint style="info" %}
+If you are using the WSL, you files for your experiment must be in the WSL, you can't use the WSL to run an experiment stored on the rest of your computer.
+{% endhint %}
+
 ### Using code editors
 
 Different [code editors](../../tips-and-tricks/code-editors.md) \(such as VSCode\) will have commands that you can run to open them in the current directory \(e.g., `code .`\). This helps make for a better coding experience in the WSL.
