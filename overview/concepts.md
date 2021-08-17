@@ -5,7 +5,7 @@ title: Concepts
 
 # Concepts
 
-_Elements on this page might refer to the f_[_ile structure_](structure.md)_, the_ [_life cycle_](lifecycle.md)_, or the_ [_API_ ](api.md)_of an Empirica experiment._
+_Elements on this page might refer to the f_[_ile structure_](structure.md)_, the_ [_life cycle_](lifecycle/)_, or the_ [_API_ ](api.md)_of an Empirica experiment._
 
 ## Game
 

@@ -34,10 +34,9 @@ meteor --settings settings.json
 
 The settings file is useful for:
 
-* [setting the player id with a URL query](../../faq/faq.md#can-i-set-the-player-id-via-url-query)
-* [connecting your app to your MongoDB database](../../faq/faq.md#how-do-i-connect-my-app-to-mongodb-atlas)
-
 {% page-ref page="specifying-login-details.md" %}
 
+{% page-ref page="id-url-queries.md" %}
 
+{% page-ref page="connecting-locally-to-mongodb.md" %}
 

@@ -4,7 +4,7 @@ description: >-
   others can participate
 ---
 
-# Deploying your experiment
+# Deploying Your Experiment
 
 This tutorial describes how to connect to [`MongoDB Atlas`](https://www.mongodb.com/cloud/atlas) for your database service and [`Meteor Galaxy`](https://www.meteor.com/cloud)\(a service directly provided by Meteor\) for your app hosting service.  Other services are also available, and we find these particularly easy with Empirica.
 

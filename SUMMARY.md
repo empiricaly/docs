@@ -20,14 +20,21 @@
   * [Part 5: Adding Bots](guides/tutorial-your-first-experiment/part-3-adding-bots.md)
 * [The Settings File](guides/the-settings-file/README.md)
   * [Specifying Login Details](guides/the-settings-file/specifying-login-details.md)
-* [Deploying your experiment](guides/deploying-my-experiment/README.md)
+  * [Setting player ids via URL queries](guides/the-settings-file/id-url-queries.md)
+  * [Connecting Locally to MongoDB](guides/the-settings-file/connecting-locally-to-mongodb.md)
+* [The Admin Panel](guides/the-admin-panel.md)
+* [Special Empirica Elements \(and how to modify them\)](guides/special-empirica-elements-and-how-to-modify-them.md)
+* [Deploying Your Experiment](guides/deploying-my-experiment/README.md)
   * [Database](guides/deploying-my-experiment/database.md)
   * [Hosting](guides/deploying-my-experiment/hosting.md)
+* [Managing the Data](guides/managing-the-data.md)
+* [Using Custom Collections](guides/using-custom-collections.md)
 
 ## Conceptual Overview <a id="overview"></a>
 
 * [Structure](overview/structure.md)
-* [Game Life Cycle](overview/lifecycle.md)
+* [Game Life Cycle](overview/lifecycle/README.md)
+  * [Customising when players submit stages](overview/lifecycle/customising-when-players-submit-stages.md)
 * [Concepts](overview/concepts.md)
 * [Randomization & Batches](overview/randomization-and-batches.md)
 * [API](overview/api.md)
@@ -35,7 +42,6 @@
 ## FAQ
 
 * [I need help!](faq/about-empirica.md)
-* [Experiment Set Up](faq/setup-deployment-and-hosting.md)
 * [The Processes and Elements of an Empirica Experiment](faq/the-processes-and-elements-of-an-empirica-experiment.md)
 * [Managing Players and Games](faq/faq.md)
 

@@ -14,7 +14,7 @@ Then you should set up a **project**. A project can contain multiple **clusters*
 
 ### Clusters
 
-In your project, got to _clusters_ and click on _Create a New Cluster_. You can select the provider, region, and tier of your cluster. See [here](../../faq/faq.md#what-should-be-the-scale-of-my-mongodb-cluster) which tier of cluster you should choose. It takes a few minutes for the cluster to become operational.
+In your project, got to _clusters_ and click on _Create a New Cluster_. You can select the provider, region, and tier of your cluster. It takes a few minutes for the cluster to become operational.
 
 {% hint style="info" %}
 The **sandbox** tier allows you to test out a free cluster with a limited storage space. This is perfect for development. However, you want to have more power, space, and guaranties when you deploy your app and start collecting data. Unless you plan on collecting a lot of data, an **M10 tier** is a good place to start. **Please take note of the fees involved in cluster tiers other than sandbox.**
@@ -42,7 +42,7 @@ You need the `?retryWrites=true&w=majority` part for the [resilience of your app
 
 The important part that this URI provides you is the part between the `@` and the `<dbname>`, it is the **connection**.
 
-In your [settings file](../../faq/faq.md#what-is-the-settings-json), you will have to add this JSON object:
+In your [settings file](../the-settings-file/), you will have to add this JSON object:
 
 ```text
     "galaxy.meteor.com": {
@@ -53,9 +53,9 @@ In your [settings file](../../faq/faq.md#what-is-the-settings-json), you will ha
     },
 ```
 
-Fill in the &lt;&gt; parts with the appropriate elements from when you created the [users ](../../faq/faq.md#users)and the [database](../../faq/faq.md#databases). The connection is mentioned above.
+Fill in the &lt;&gt; parts with the appropriate elements from when you created the users and the database. The connection is mentioned above.
 
-Now, when you [deploy your app with the settings file](../../faq/faq.md#how-do-i-deploy-my-app-to-galaxy) or when you [launch it locally with the settings file](../../faq/faq.md#what-is-the-settings-json), you will be connected to the database. Once you start using your app connected to the database, your should be able to verify that everything worked by refreshing your page on your cluster's database: You will see all the collections relevant to an Empirica app appear \(games, players, treatments, etc.\).
+Now, when you [deploy your app with the settings file](hosting.md#deploying) or when you [launch it locally with the settings file](../the-settings-file/connecting-locally-to-mongodb.md), you will be connected to the database. Once you start using your app connected to the database, your should be able to verify that everything worked by refreshing your page on your cluster's database: You will see all the collections relevant to an Empirica app appear \(games, players, treatments, etc.\).
 
 ### MongoDB Atlas sent me an email about Query Targeting, should I be worried?
 

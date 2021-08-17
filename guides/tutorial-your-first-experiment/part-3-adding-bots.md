@@ -116,7 +116,7 @@ if (game.treatment.chat && secondsRemaining % 20 === 0) {
 
 Notice that we get the `"chat"` from the `round`, this is because we set the `scope` of the chat to the `round`. 
 
-If the chat is empty we prepare an empty array, otherwise we take the messages in the chat as they are, and we push a new message from this bot with a random choice of text. We set these new messages to the round.
+If the chat is empty, we prepare an empty array, otherwise we take the messages in the chat as they are, and we push a new message from this bot with a random choice of text. We set these new messages to the round.
 
 ## Next steps and future work
 

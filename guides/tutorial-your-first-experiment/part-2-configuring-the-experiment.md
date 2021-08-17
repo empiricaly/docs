@@ -247,7 +247,7 @@ The **export** keyword allows us to access this JavaScript object in another `.j
 Next, we need to use this data in the `Empirica.gameInit` callback in `/server/main.js`. This is an important event that sets up the rounds and stages of a game. 
 
 {% hint style="info" %}
-For more about the life cycle of an Empirica app and its callback, consult [our guide](../../overview/lifecycle.md).
+For more about the life cycle of an Empirica app and its callback, consult [our guide](../../overview/lifecycle/).
 {% endhint %}
 
 You can see that this file has a few imports and then most of the code is within `Empirica.gameInit`. In gameInit, you can see that it is going through each player and assigns them some data such as a score and an avatar. Then it is doing something 10 times \(using `_times()` from [underscore.js](http://underscorejs.org); a library of convenient JavaScript tools\): It is creating 10 rounds, each with one stage.
@@ -367,7 +367,7 @@ export default class TaskStimulus extends React.Component {
 Empirica provides a set of methods that will run at the start and end of each round and stage. These can be found in `server/callbacks.js`.
 
 {% hint style="info" %}
-To learn more about callbacks, see [our guide on the life cycle of an Empirica experiment](../../overview/lifecycle.md).
+To learn more about callbacks, see [our guide on the life cycle of an Empirica experiment](../../overview/lifecycle/).
 {% endhint %}
 
 By default, the score is equal to the total sum of responses, but this is not very informative. We'll modify this to show percentage of error subtracted from 1. Replace the `Empirica.onRoundEnd` code in `server/callbacks.js`  with this:

@@ -5,7 +5,7 @@ title: API
 
 # API
 
-_Elements on this page refer to the f_[_ile structure_](structure.md)_,_ [_concepts_](concepts.md)_, and_ [_life cycle_](lifecycle.md) _of an Empirica experiment._
+_Elements on this page refer to the f_[_ile structure_](structure.md)_,_ [_concepts_](concepts.md)_, and_ [_life cycle_](lifecycle/) _of an Empirica experiment._
 
 This document describes Empirica's [server](api.md#server), [client](api.md#client) and [shared ](api.md#shared)APIs.
 
