@@ -26,7 +26,7 @@ meteor --settings <name of settings file>
 ```
 
 {% hint style="info" %}
-This might always work for connecting locally to your MongoDB. The method below is more reliable.
+This might not always work for connecting locally to your MongoDB. The method below is more reliable.
 {% endhint %}
 
 ## Via the command line
