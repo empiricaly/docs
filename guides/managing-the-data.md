@@ -117,7 +117,7 @@ This allows you to download a version of the data without any identifying inform
 
 ## How long players took to submit in a stage
 
-Once you have the data, in the `player-stage` part of the data, you can see each `playerId` and `stageId` combination, when it is was created  \(`createdAt`\) and when the player submitted \(`submittedAt`\). Compare the two and that will give you the time it took the player to submit that stage.
+Once you have the data, in the `player_stages` part of the data, you can see each `playerId` and `stageId` combination, when it is was started \(`createdAt`\) and when the player submitted \(`submittedAt`\). Compare the two and that will give you the time it took the player to submit that stage.
 
 ## How long the game lasted
 
